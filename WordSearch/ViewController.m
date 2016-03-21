@@ -32,7 +32,13 @@
 		return;
 	}
 	
+	NSDate *date = [NSDate date];
+	
 	_dataSource = [[SearchTree sharedInstance] find:searchText];
+	
+	NSInteger interval = [[NSDate date] timeIntervalSinceDate:date] * 1000;
+	
+	NSLog(@"%d, %@", (int)interval, searchText);
 	
 	[_ibTableView reloadData];
 }
