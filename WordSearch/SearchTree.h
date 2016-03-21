@@ -12,6 +12,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class KeyWord;
+
 @interface SearchTree : NSObject
 
 @property(nonatomic, retain) NSMutableDictionary *alphabetMap;
@@ -19,6 +21,8 @@
 + (SearchTree*)sharedInstance;
 
 - (NSArray*)find:(NSString*)word;
+
+- (KeyWord*)retriveWord:(NSInteger)nIndex;
 
 - (void)create;
 

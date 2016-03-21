@@ -47,6 +47,16 @@
 	return self;
 }
 
+- (KeyWord*)retriveWord:(NSInteger)nIndex {
+	
+	if (nIndex >= _allWords.count) {
+		
+		return nil;
+	}
+	
+	return _allWords[nIndex];
+}
+
 - (void)load {
 	
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"txt"];

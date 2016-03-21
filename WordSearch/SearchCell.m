@@ -22,7 +22,7 @@
 	
 	[_ibEnglish setText:word.word];
 	
-	[_ibEnglish setText:word.text];
+	[_ibChinese setText:word.text];
 }
 
 @end

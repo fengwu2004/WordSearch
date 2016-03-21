@@ -35,20 +35,15 @@
 - (UITableViewCell *)cellByClassName:(NSString *)className inNib:(NSString *)nibName forTableView:(UITableView *)tableView {
 	
 	Class cellClass = NSClassFromString(className);
-	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:className];
-	
 	if (cell == nil) {
 		
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil];
 		
 		for (id oneObject in nib)
-			
 			if ([oneObject isMemberOfClass:cellClass])
-				
 				return oneObject;
 	}
-	
 	return cell;
 }
 
@@ -66,9 +61,13 @@
 		cell = (SearchCell*)[self cellByClassName:@"SearchCell" inNib:@"SearchCell" forTableView:tableView];
 	}
 	
-	[cell setWord:_dataSource[indexPath.row]];
+	NSInteger index = [_dataSource[indexPath.row] integerValue];
 	
-	return nil;
+	KeyWord *word = [[SearchTree sharedInstance] retriveWord:index];
+	
+	[cell setWord:word];
+	
+	return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
