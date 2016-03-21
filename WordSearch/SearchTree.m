@@ -44,8 +44,6 @@
 		_allWords = [[NSMutableArray alloc] init];
 	}
 	
-	[self create];
-	
 	return self;
 }
 

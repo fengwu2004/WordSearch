@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SearchCell.h
 //  WordSearch
 //
 //  Created by user on 16/3/21.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class KeyWord;
 
+@interface SearchCell : UITableViewCell
 
+- (void)setWord:(KeyWord*)word;
 
 @end
-

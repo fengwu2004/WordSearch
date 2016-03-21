@@ -16,6 +16,9 @@
 		CE0389BC1C9FD09700CD2680 /* SearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389BB1C9FD09700CD2680 /* SearchTree.m */; };
 		CE0389BF1C9FD0A300CD2680 /* TNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389BE1C9FD0A300CD2680 /* TNode.m */; };
 		CE0389C21C9FD0ED00CD2680 /* KeyWord.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389C11C9FD0ED00CD2680 /* KeyWord.m */; };
+		CE0389C41C9FD22500CD2680 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE0389C31C9FD22500CD2680 /* data.txt */; };
+		CE0389C71C9FD6EE00CD2680 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389C61C9FD6EE00CD2680 /* SearchCell.m */; };
+		CE0389C91C9FD6FD00CD2680 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0389C81C9FD6FD00CD2680 /* SearchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,10 @@
 		CE0389BE1C9FD0A300CD2680 /* TNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNode.m; sourceTree = "<group>"; };
 		CE0389C01C9FD0EC00CD2680 /* KeyWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyWord.h; sourceTree = "<group>"; };
 		CE0389C11C9FD0ED00CD2680 /* KeyWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyWord.m; sourceTree = "<group>"; };
+		CE0389C31C9FD22500CD2680 /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
+		CE0389C51C9FD6EE00CD2680 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		CE0389C61C9FD6EE00CD2680 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		CE0389C81C9FD6FD00CD2680 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +74,7 @@
 		CE0389A21C9FD07D00CD2680 /* WordSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CE0389C31C9FD22500CD2680 /* data.txt */,
 				CE0389BA1C9FD09700CD2680 /* SearchTree.h */,
 				CE0389BB1C9FD09700CD2680 /* SearchTree.m */,
 				CE0389A61C9FD07D00CD2680 /* AppDelegate.h */,
@@ -82,6 +90,9 @@
 				CE0389B11C9FD07D00CD2680 /* LaunchScreen.storyboard */,
 				CE0389B41C9FD07D00CD2680 /* Info.plist */,
 				CE0389A31C9FD07D00CD2680 /* Supporting Files */,
+				CE0389C51C9FD6EE00CD2680 /* SearchCell.h */,
+				CE0389C61C9FD6EE00CD2680 /* SearchCell.m */,
+				CE0389C81C9FD6FD00CD2680 /* SearchCell.xib */,
 			);
 			path = WordSearch;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 				TargetAttributes = {
 					CE03899F1C9FD07D00CD2680 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = UKP869MHKN;
 					};
 				};
 			};
@@ -151,6 +163,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0389C91C9FD6FD00CD2680 /* SearchCell.xib in Resources */,
+				CE0389C41C9FD22500CD2680 /* data.txt in Resources */,
 				CE0389B31C9FD07D00CD2680 /* LaunchScreen.storyboard in Resources */,
 				CE0389B01C9FD07D00CD2680 /* Assets.xcassets in Resources */,
 				CE0389AE1C9FD07D00CD2680 /* Main.storyboard in Resources */,
@@ -167,6 +181,7 @@
 				CE0389AB1C9FD07D00CD2680 /* ViewController.m in Sources */,
 				CE0389C21C9FD0ED00CD2680 /* KeyWord.m in Sources */,
 				CE0389BC1C9FD09700CD2680 /* SearchTree.m in Sources */,
+				CE0389C71C9FD6EE00CD2680 /* SearchCell.m in Sources */,
 				CE0389BF1C9FD0A300CD2680 /* TNode.m in Sources */,
 				CE0389A81C9FD07D00CD2680 /* AppDelegate.m in Sources */,
 				CE0389A51C9FD07D00CD2680 /* main.m in Sources */,
@@ -281,10 +296,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianfei Chen (K5H3MEFEEM)";
 				INFOPLIST_FILE = WordSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruoogle.gamechat.WordSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruoogle.liveshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0208e406-7486-429d-99c0-ce43bcb58ab9";
 			};
 			name = Debug;
 		};
@@ -292,10 +309,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianfei Chen (K5H3MEFEEM)";
 				INFOPLIST_FILE = WordSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruoogle.gamechat.WordSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruoogle.liveshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0208e406-7486-429d-99c0-ce43bcb58ab9";
 			};
 			name = Release;
 		};

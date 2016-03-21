@@ -6,6 +6,10 @@
 //  Copyright © 2016年 user. All rights reserved.
 //
 
+//
+//trie树的优化，多一张26个字母的表alphabetMap
+//
+
 #import <Foundation/Foundation.h>
 
 @interface SearchTree : NSObject
@@ -15,5 +19,7 @@
 + (SearchTree*)sharedInstance;
 
 - (NSArray*)find:(NSString*)word;
+
+- (void)create;
 
 @end
