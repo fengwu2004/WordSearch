@@ -13,6 +13,9 @@
 		CE0389AE1C9FD07D00CD2680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0389AC1C9FD07D00CD2680 /* Main.storyboard */; };
 		CE0389B01C9FD07D00CD2680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0389AF1C9FD07D00CD2680 /* Assets.xcassets */; };
 		CE0389B31C9FD07D00CD2680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0389B11C9FD07D00CD2680 /* LaunchScreen.storyboard */; };
+		CE0389BC1C9FD09700CD2680 /* SearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389BB1C9FD09700CD2680 /* SearchTree.m */; };
+		CE0389BF1C9FD0A300CD2680 /* TNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389BE1C9FD0A300CD2680 /* TNode.m */; };
+		CE0389C21C9FD0ED00CD2680 /* KeyWord.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389C11C9FD0ED00CD2680 /* KeyWord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		CE0389AF1C9FD07D00CD2680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0389B21C9FD07D00CD2680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0389B41C9FD07D00CD2680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0389BA1C9FD09700CD2680 /* SearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTree.h; sourceTree = "<group>"; };
+		CE0389BB1C9FD09700CD2680 /* SearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTree.m; sourceTree = "<group>"; };
+		CE0389BD1C9FD0A300CD2680 /* TNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNode.h; sourceTree = "<group>"; };
+		CE0389BE1C9FD0A300CD2680 /* TNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNode.m; sourceTree = "<group>"; };
+		CE0389C01C9FD0EC00CD2680 /* KeyWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyWord.h; sourceTree = "<group>"; };
+		CE0389C11C9FD0ED00CD2680 /* KeyWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyWord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,16 @@
 		CE0389A21C9FD07D00CD2680 /* WordSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CE0389BA1C9FD09700CD2680 /* SearchTree.h */,
+				CE0389BB1C9FD09700CD2680 /* SearchTree.m */,
 				CE0389A61C9FD07D00CD2680 /* AppDelegate.h */,
 				CE0389A71C9FD07D00CD2680 /* AppDelegate.m */,
 				CE0389A91C9FD07D00CD2680 /* ViewController.h */,
 				CE0389AA1C9FD07D00CD2680 /* ViewController.m */,
+				CE0389BD1C9FD0A300CD2680 /* TNode.h */,
+				CE0389BE1C9FD0A300CD2680 /* TNode.m */,
+				CE0389C01C9FD0EC00CD2680 /* KeyWord.h */,
+				CE0389C11C9FD0ED00CD2680 /* KeyWord.m */,
 				CE0389AC1C9FD07D00CD2680 /* Main.storyboard */,
 				CE0389AF1C9FD07D00CD2680 /* Assets.xcassets */,
 				CE0389B11C9FD07D00CD2680 /* LaunchScreen.storyboard */,
@@ -150,6 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0389AB1C9FD07D00CD2680 /* ViewController.m in Sources */,
+				CE0389C21C9FD0ED00CD2680 /* KeyWord.m in Sources */,
+				CE0389BC1C9FD09700CD2680 /* SearchTree.m in Sources */,
+				CE0389BF1C9FD0A300CD2680 /* TNode.m in Sources */,
 				CE0389A81C9FD07D00CD2680 /* AppDelegate.m in Sources */,
 				CE0389A51C9FD07D00CD2680 /* main.m in Sources */,
 			);
