@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 #import "SearchTree.h"
+#import "SearchCell.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, retain) IBOutlet UISearchBar *ibSearchBar;
 @property (nonatomic, retain) IBOutlet UITableView *ibTableView;
+@property (nonatomic, retain) NSArray *dataSource;
 
 @end
 
@@ -25,10 +27,12 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
 	
-	NSLog(@"%@", searchText);
+	_dataSource = [[SearchTree sharedInstance] find:searchText];
+	
+	[_ibTableView reloadData];
 }
 
-+ (UITableViewCell *)cellByClassName:(NSString *)className inNib:(NSString *)nibName forTableView:(UITableView *)tableView {
+- (UITableViewCell *)cellByClassName:(NSString *)className inNib:(NSString *)nibName forTableView:(UITableView *)tableView {
 	
 	Class cellClass = NSClassFromString(className);
 	
@@ -50,6 +54,20 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
+	if (indexPath.row >= _dataSource.count) {
+		
+		return nil;
+	}
+	
+	SearchCell *cell = (SearchCell *)[tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
+	
+	if (!cell) {
+		
+		cell = (SearchCell*)[self cellByClassName:@"SearchCell" inNib:@"SearchCell" forTableView:tableView];
+	}
+	
+	[cell setWord:_dataSource[indexPath.row]];
+	
 	return nil;
 }
 
@@ -60,7 +78,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
-	return 0;
+	return [_dataSource count];
 }
 
 
