@@ -27,6 +27,11 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
 	
+	if (!searchText) {
+		
+		return;
+	}
+	
 	_dataSource = [[SearchTree sharedInstance] find:searchText];
 	
 	[_ibTableView reloadData];

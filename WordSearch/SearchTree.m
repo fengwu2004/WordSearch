@@ -113,6 +113,11 @@
 
 - (NSArray*)find:(NSString*)word {
 	
+	if (!word || word.length == 0) {
+		
+		return nil;
+	}
+	
 	NSString *key = [word substringWithRange:NSMakeRange(0, 1)];
 	
 	NSArray *nodes = [_alphabetMap objectForKey:key];
