@@ -7,7 +7,7 @@
 //
 
 #import "SearchCell.h"
-#import "KeyWord.h"
+#import "Word.h"
 
 @interface SearchCell()
 
@@ -18,11 +18,11 @@
 
 @implementation SearchCell
 
-- (void)setWord:(KeyWord*)word {
+- (void)setWord:(Word*)word {
 	
-	[_ibEnglish setText:word.word];
+	[_ibEnglish setText:word.english];
 	
-	[_ibChinese setText:word.text];
+	[_ibChinese setText:word.chinese];
 }
 
 @end

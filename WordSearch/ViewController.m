@@ -63,7 +63,7 @@
 	
 	NSInteger index = [_dataSource[indexPath.row] integerValue];
 	
-	KeyWord *word = [[SearchTree sharedInstance] retriveWord:index];
+	Word *word = [[SearchTree sharedInstance] retriveWord:index];
 	
 	[cell setWord:word];
 	

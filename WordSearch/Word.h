@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KeyWord : NSObject
+@interface Word : NSObject
 
-@property (nonatomic, copy) NSString *word;
-@property (nonatomic, copy) NSString *text;
-@property (nonatomic, assign) NSInteger value;
+@property (nonatomic, copy) NSString *english;
+@property (nonatomic, copy) NSString *chinese;
+@property (nonatomic, assign) NSInteger weight;
 @property (nonatomic, assign) NSInteger nIndex;
 
 @end

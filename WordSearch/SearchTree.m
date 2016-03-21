@@ -8,7 +8,7 @@
 
 #import "SearchTree.h"
 #import "TNode.h"
-#import "KeyWord.h"
+#import "Word.h"
 
 @interface SearchTree()
 
@@ -47,7 +47,7 @@
 	return self;
 }
 
-- (KeyWord*)retriveWord:(NSInteger)nIndex {
+- (Word*)retriveWord:(NSInteger)nIndex {
 	
 	if (nIndex >= _allWords.count) {
 		
@@ -76,15 +76,15 @@
 			continue;
 		}
 		
-		KeyWord *keyword = [[KeyWord alloc] init];
+		Word *keyword = [[Word alloc] init];
 		
 		keyword.nIndex = i;
 		
-		keyword.word = [subWords[0] lowercaseString];
+		keyword.english = [subWords[0] lowercaseString];
 		
-		keyword.text = subWords[1];
+		keyword.chinese = subWords[1];
 		
-		keyword.value = [subWords[2] integerValue];
+		keyword.weight = [subWords[2] integerValue];
 		
 		[_allWords addObject:keyword];
 	}
@@ -103,9 +103,9 @@
 	
 	for (NSInteger i = 0; i < _allWords.count; ++i) {
 		
-		KeyWord *keyword = _allWords[i];
+		Word *keyword = _allWords[i];
 		
-		NSString *value = keyword.word;
+		NSString *value = keyword.english;
 		
 		[_root addWord:value withIndex:keyword.nIndex];
 	}
@@ -146,11 +146,11 @@
 		
 		NSInteger index2 = [obj2 integerValue];
 		
-		KeyWord *keyWord1 = _allWords[index1];
+		Word *keyWord1 = _allWords[index1];
 		
-		KeyWord *keyWord2 = _allWords[index2];
+		Word *keyWord2 = _allWords[index2];
 		
-		if (keyWord1.value > keyWord2.value) {
+		if (keyWord1.weight > keyWord2.weight) {
 			
 			return NSOrderedDescending;
 		}

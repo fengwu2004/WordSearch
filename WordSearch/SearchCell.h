@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class KeyWord;
+@class Word;
 
 @interface SearchCell : UITableViewCell
 
-- (void)setWord:(KeyWord*)word;
+- (void)setWord:(Word*)word;
 
 @end

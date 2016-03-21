@@ -12,7 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class KeyWord;
+@class Word;
 
 @interface SearchTree : NSObject
 
@@ -22,7 +22,7 @@
 
 - (NSArray*)find:(NSString*)word;
 
-- (KeyWord*)retriveWord:(NSInteger)nIndex;
+- (Word*)retriveWord:(NSInteger)nIndex;
 
 - (void)create;
 

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 user. All rights reserved.
 //
 
-#import "KeyWord.h"
+#import "Word.h"
 
-@implementation KeyWord
+@implementation Word
 
 @end

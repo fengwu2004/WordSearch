@@ -15,7 +15,7 @@
 		CE0389B31C9FD07D00CD2680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0389B11C9FD07D00CD2680 /* LaunchScreen.storyboard */; };
 		CE0389BC1C9FD09700CD2680 /* SearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389BB1C9FD09700CD2680 /* SearchTree.m */; };
 		CE0389BF1C9FD0A300CD2680 /* TNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389BE1C9FD0A300CD2680 /* TNode.m */; };
-		CE0389C21C9FD0ED00CD2680 /* KeyWord.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389C11C9FD0ED00CD2680 /* KeyWord.m */; };
+		CE0389C21C9FD0ED00CD2680 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389C11C9FD0ED00CD2680 /* Word.m */; };
 		CE0389C41C9FD22500CD2680 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE0389C31C9FD22500CD2680 /* data.txt */; };
 		CE0389C71C9FD6EE00CD2680 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389C61C9FD6EE00CD2680 /* SearchCell.m */; };
 		CE0389C91C9FD6FD00CD2680 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0389C81C9FD6FD00CD2680 /* SearchCell.xib */; };
@@ -36,8 +36,8 @@
 		CE0389BB1C9FD09700CD2680 /* SearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTree.m; sourceTree = "<group>"; };
 		CE0389BD1C9FD0A300CD2680 /* TNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNode.h; sourceTree = "<group>"; };
 		CE0389BE1C9FD0A300CD2680 /* TNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNode.m; sourceTree = "<group>"; };
-		CE0389C01C9FD0EC00CD2680 /* KeyWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyWord.h; sourceTree = "<group>"; };
-		CE0389C11C9FD0ED00CD2680 /* KeyWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyWord.m; sourceTree = "<group>"; };
+		CE0389C01C9FD0EC00CD2680 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		CE0389C11C9FD0ED00CD2680 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		CE0389C31C9FD22500CD2680 /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 		CE0389C51C9FD6EE00CD2680 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		CE0389C61C9FD6EE00CD2680 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 				CE0389AA1C9FD07D00CD2680 /* ViewController.m */,
 				CE0389BD1C9FD0A300CD2680 /* TNode.h */,
 				CE0389BE1C9FD0A300CD2680 /* TNode.m */,
-				CE0389C01C9FD0EC00CD2680 /* KeyWord.h */,
-				CE0389C11C9FD0ED00CD2680 /* KeyWord.m */,
+				CE0389C01C9FD0EC00CD2680 /* Word.h */,
+				CE0389C11C9FD0ED00CD2680 /* Word.m */,
 				CE0389AC1C9FD07D00CD2680 /* Main.storyboard */,
 				CE0389AF1C9FD07D00CD2680 /* Assets.xcassets */,
 				CE0389B11C9FD07D00CD2680 /* LaunchScreen.storyboard */,
@@ -179,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0389AB1C9FD07D00CD2680 /* ViewController.m in Sources */,
-				CE0389C21C9FD0ED00CD2680 /* KeyWord.m in Sources */,
+				CE0389C21C9FD0ED00CD2680 /* Word.m in Sources */,
 				CE0389BC1C9FD09700CD2680 /* SearchTree.m in Sources */,
 				CE0389C71C9FD6EE00CD2680 /* SearchCell.m in Sources */,
 				CE0389BF1C9FD0A300CD2680 /* TNode.m in Sources */,
@@ -337,6 +337,7 @@
 				CE0389B91C9FD07D00CD2680 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
