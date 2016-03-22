@@ -19,6 +19,7 @@
 		CE0389C41C9FD22500CD2680 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE0389C31C9FD22500CD2680 /* data.txt */; };
 		CE0389C71C9FD6EE00CD2680 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0389C61C9FD6EE00CD2680 /* SearchCell.m */; };
 		CE0389C91C9FD6FD00CD2680 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0389C81C9FD6FD00CD2680 /* SearchCell.xib */; };
+		CE8B9EC41CA1273E0035AA69 /* WordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8B9EC31CA1273E0035AA69 /* WordTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		CE0389C51C9FD6EE00CD2680 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		CE0389C61C9FD6EE00CD2680 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
 		CE0389C81C9FD6FD00CD2680 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		CE8B9EC21CA1273E0035AA69 /* WordTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTest.h; sourceTree = "<group>"; };
+		CE8B9EC31CA1273E0035AA69 /* WordTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				CE0389C51C9FD6EE00CD2680 /* SearchCell.h */,
 				CE0389C61C9FD6EE00CD2680 /* SearchCell.m */,
 				CE0389C81C9FD6FD00CD2680 /* SearchCell.xib */,
+				CE8B9EC21CA1273E0035AA69 /* WordTest.h */,
+				CE8B9EC31CA1273E0035AA69 /* WordTest.m */,
 			);
 			path = WordSearch;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0389AB1C9FD07D00CD2680 /* ViewController.m in Sources */,
+				CE8B9EC41CA1273E0035AA69 /* WordTest.m in Sources */,
 				CE0389C21C9FD0ED00CD2680 /* Word.m in Sources */,
 				CE0389BC1C9FD09700CD2680 /* SearchTree.m in Sources */,
 				CE0389C71C9FD6EE00CD2680 /* SearchCell.m in Sources */,

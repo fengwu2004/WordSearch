@@ -9,6 +9,7 @@
 #import "SearchTree.h"
 #import "TNode.h"
 #import "Word.h"
+#import "WordTest.h"
 
 @interface SearchTree()
 
@@ -59,35 +60,40 @@
 
 - (void)load {
 	
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"txt"];
+//	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"txt"];
+//	
+//	NSString *str = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+//	
+//	NSArray *array = [str componentsSeparatedByString:@"\n"];
+//	
+//	for (NSInteger i = 0; i < array.count; ++i) {
+//		
+//		NSString *word = array[i];
+//		
+//		NSArray *subWords = [word componentsSeparatedByString:@"\t"];
+//		
+//		if (subWords.count < 3) {
+//			
+//			continue;
+//		}
+//		
+//		Word *keyword = [[Word alloc] init];
+//		
+//		keyword.nIndex = i;
+//		
+//		keyword.english = [subWords[0] lowercaseString];
+//		
+//		keyword.chinese = subWords[1];
+//		
+//		keyword.weight = [subWords[2] integerValue];
+//		
+//		[_allWords addObject:keyword];
+//	}
 	
-	NSString *str = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 	
-	NSArray *array = [str componentsSeparatedByString:@"\n"];
+	WordTest *wordTest = [[WordTest alloc] init];
 	
-	for (NSInteger i = 0; i < array.count; ++i) {
-		
-		NSString *word = array[i];
-		
-		NSArray *subWords = [word componentsSeparatedByString:@"\t"];
-		
-		if (subWords.count < 3) {
-			
-			continue;
-		}
-		
-		Word *keyword = [[Word alloc] init];
-		
-		keyword.nIndex = i;
-		
-		keyword.english = [subWords[0] lowercaseString];
-		
-		keyword.chinese = subWords[1];
-		
-		keyword.weight = [subWords[2] integerValue];
-		
-		[_allWords addObject:keyword];
-	}
+	_allWords = [[wordTest createWord:100000] copy];
 }
 
 - (void)create {
