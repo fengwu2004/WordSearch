@@ -13,33 +13,42 @@
 #define str2 @"heading"
 #define str3 @"mechanical"
 
+static NSInteger count = 0;
+
 @implementation TNode
 
 - (id)init {
 	
 	self = [super init];
 	
-	_subNodes = [[NSMutableArray alloc] init];
+//	_subNodes = [[NSMutableArray alloc] init];
 	
 	return self;
 }
 
-- (id)initWithKey:(NSString*)key {
+- (NSInteger)count {
+	
+	return count;
+}
+
+- (id)initWithKey:(unichar)key {
 	
 	self = [super init];
 	
-	_subNodes = [[NSMutableArray alloc] init];
+//	_subNodes = [[NSMutableArray alloc] init];
 	
-	self.key = key;
+	_key = key;
 	
+	++count;
+
 	return self;
 }
 
-- (TNode*)findChildForKey:(NSString*)key {
+- (TNode*)findChildForKey:(unichar)key {
 	
 	for (TNode *node in _subNodes) {
 		
-		if ([node.key isEqualToString:key]) {
+		if (node.key == key) {
 			
 			return node;
 		}
@@ -55,7 +64,7 @@
 		return;
 	}
 	
-	NSString * key = [word substringWithRange:NSMakeRange(0, 1)];
+	unichar key = [word characterAtIndex:0];
 	
 	NSString *sub = [word substringWithRange:NSMakeRange(1, [word length] - 1)];
 	
@@ -73,12 +82,17 @@
 		
 		[subNode addWord:sub withIndex:index];
 		
+		if (!_subNodes) {
+			
+			_subNodes = [[NSMutableArray alloc] init];
+		}
+		
 		[_subNodes addObject:subNode];
 	}
 	
 	NSMutableDictionary *alphabetMap = [SearchTree sharedInstance].alphabetMap;
 	
-	NSMutableArray *array = [alphabetMap objectForKey:key];
+	NSMutableArray *array = [alphabetMap objectForKey:[NSNumber numberWithInteger:key]];
 	
 	if (array) {
 		
@@ -90,15 +104,20 @@
 		
 		[array addObject:subNode];
 		
-		[alphabetMap setObject:array forKey:key];
+		[alphabetMap setObject:array forKey:[NSNumber numberWithInteger:key]];
 	}
 }
 
 - (void)match:(NSString*)word out:(NSMutableArray*)outArray {
 	
-	NSString * key = [word substringWithRange:NSMakeRange(0, 1)];
+	if (word.length == 0) {
+		
+		return;
+	}
 	
-	if (![key isEqualToString:_key]) {
+	unichar key = [word characterAtIndex:0];
+	
+	if (key != _key) {
 		
 		return;
 	}

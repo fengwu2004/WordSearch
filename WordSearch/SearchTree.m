@@ -118,13 +118,17 @@
 }
 
 - (NSArray*)find:(NSString*)word {
+
+	NSLog(@"%d", (int)[_root count]);
 	
 	if (!word || word.length == 0) {
 		
 		return nil;
 	}
 	
-	NSString *key = [word substringWithRange:NSMakeRange(0, 1)];
+	unichar c = [word characterAtIndex:0];
+	
+	NSNumber *key = [NSNumber numberWithInteger:c];
 	
 	NSArray *nodes = [_alphabetMap objectForKey:key];
 	

@@ -17,7 +17,7 @@
 	
 	if (!alphabet) {
 		
-		alphabet = @"abcdefghijklmnopqrstuvwxyz";
+		alphabet = @"abcdefghijklmmopqrstuvwxyz";
 	}
 	
 	return alphabet;
